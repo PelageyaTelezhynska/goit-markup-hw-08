@@ -58,6 +58,13 @@
   height: 100vh;
   z-index: 1;
   background-color: var(--main-background-color);
+  @include animation(opacity, visibility);
+
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
 
   @include tablet {
     display: none;
