@@ -1,0 +1,20 @@
+.logo {
+  color: var(--accent-color);
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  @include font(24px, 1.17);
+  text-decoration: none;
+  transform: translate(0px) scale(1);
+  @include animation(color, transform);
+
+  &:hover,
+  &:focus {
+    color: var(--title-color);
+    transform: translate(20px) scale(1.05);
+  }
+
+  @include desktop {
+    @include font(26px, 1.19);
+  }
+}

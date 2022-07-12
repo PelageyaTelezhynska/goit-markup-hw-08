@@ -1,0 +1,35 @@
+@mixin animation($property...) {
+  transition-property: $property;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@mixin centerFlex($display: flex, $jc: center, $ai: center) {
+  display: $display;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
+@mixin font($fs: 14px, $lh: 1.17, $ls: 0.03em) {
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
+}
+
+@mixin mobile {
+  @media screen and (min-width: 480px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
